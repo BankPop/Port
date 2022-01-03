@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+   .img-responsive {
+      max-width: 100%;
+      height: auto;
+   }
+
 *{
     background-color: #191e29;
     font-family: 'Bebas Neue', cursive;
@@ -16,8 +21,8 @@
 }
 .main h1{
     color: #fff;
-    font-size: 150px;
-    margin: 0px;
+    font-size: 1000%;
+    margin: 0;
     letter-spacing: 20px;
 }
 .main h2{
