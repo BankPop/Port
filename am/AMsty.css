@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --clr: #191e29;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+    padding-bottom: 60px;
+}
+.menubar{
+    width: 800px;
+    height:130px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.menubar ul{
+    display: flex;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+.menubar ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    font-size: 30px;
+}
+.menubar ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.menubar ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+.menubar ul li.active .icon{
+    transform: translateY(-60px);
+}
+.menubar ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.menubar ul li.active a .text{
+    transform: translateY(20px);
+    opacity: 1;
+}
+.pop{
+    position: absolute;
+    top: -50%;
+    width: 120px;
+    height: 120px;
+    background: #01c38d;
+    border-radius: 50%;
+    border: 10px solid var(--clr);
+    transition: 0.5s;
+}
+.pop::before{
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-top-right-radius: 40px;
+    box-shadow: 0px -16px 0 0 var(--clr);
+}
+.pop::after{
+    content: '';
+    position: absolute;
+    top: 55%;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-top-left-radius: 40px;
+    box-shadow: 0px -16px 0 0 var(--clr);
+}
+
+.menubar ul li:nth-child(1).active ~ .pop{
+    transform: translateX(calc(-70*4));
+}
+.menubar ul li:nth-child(2).active ~ .pop{
+    transform: translateX(calc(-160.5px*1));
+}
+.menubar ul li:nth-child(3).active ~ .pop{
+    transform: translateX(calc(0.5px*2));
+}
+.menubar ul li:nth-child(4).active ~ .pop{
+    transform: translateX(calc(53.5px*3));
+}
+.menubar ul li:nth-child(5).active ~ .pop{
+    transform: translateX(calc(80px*4));
+}

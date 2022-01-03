@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="AMsty.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="menubar">
+        <ul>
+            <li class="box">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">AboutMe</span>
+                </a>
+            </li>
+            <li class="box">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="accessibility-outline"></ion-icon>
+                    </span>
+                    <span class="text">Ability</span>
+                </a>
+            </li>
+            <li class="box">
+                <a href="#">
+                    <span class="icon active">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="box">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="trophy-outline"></ion-icon>
+                    </span>
+                    <span class="text">Certificate</span>
+                </a>
+            </li>
+            <li class="box">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="images-outline"></ion-icon>
+                    </span>
+                    <span class="text">Activity</span>
+                </a>
+            </li>
+            <div class="pop"></div>
+
+            <script>
+                const list =document.querySelectorAll('.box');
+                function activeLink(){
+                    list.forEach((item) =>
+                    item.classList.remove('active'));
+                    this.classList.add('active');
+                }
+                list.forEach((item) =>
+                item.addEventListener('click',activeLink));
+            </script>
+        </ul>
+    </div>
+</body>
+</html>
